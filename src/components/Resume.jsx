@@ -1,8 +1,8 @@
 function Resume() {
   return (
     <section id="curriculum">
-      <h2>Currículum</h2>
-      <p>Puedes visualizarlo directamente aquí o descargarlo.</p>
+      <h2>Curriculum</h2>
+      <p>Puedes ver o descargar mi curriculum aca:</p>
 
       <div className="pdf-container">
         <iframe

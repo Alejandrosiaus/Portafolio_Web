@@ -5,6 +5,14 @@ function Projects() {
 
       <div className="project-grid">
 
+
+        <div className="project-card">
+          <h3>GameBlades - Ecommerce</h3>
+          <p>Tienda ficticia de espadas legendarias, con carrito, favoritos y sistema de rutas.</p>
+          <p><strong>Tecnologías:</strong> React, Vite, useContext, useRef, localStorage</p>
+          <a href="https://proyecto-e-commerce-chi.vercel.app/" className="btn" target="_blank" rel="noreferrer">Ver Proyecto</a>
+        </div>
+
         <div className="project-card">
           <h3>Tema Dinámico con useContext</h3>
           <p>Permite alternar entre modo claro y oscuro usando contexto de React.</p>
@@ -18,14 +26,14 @@ function Projects() {
           <p><strong>Tecnologías:</strong> React (CDN), useCallback</p>
           <a href="/proyectos/callback/index.html" className="btn" target="_blank">Ver demo</a>
         </div>
-
+        {/*
         <div className="project-card">
           <h3>Buscador con useMemo</h3>
           <p>Filtra usuarios de Breaking Bad de forma eficiente.</p>
           <p><strong>Tecnologías:</strong> React (CDN), useMemo</p>
           <a href="/proyectos/memo/index.html" className="btn" target="_blank">Ver demo</a>
         </div>
-
+        */}
         <div className="project-card">
           <h3>Cronómetro con useRef</h3>
           <p>Cronómetro funcional con historial de sesiones guardadas.</p>
