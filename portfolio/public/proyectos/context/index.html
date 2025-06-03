@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>useContext Tema</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      transition: all 0.3s ease;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .app-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .card {
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+
+    .toggle-box {
+      padding: 20px;
+      border: 2px dashed #aaa;
+      border-radius: 12px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- React y ReactDOM desde CDN -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+    const { useState, useContext, createContext } = React;
+
+    const ThemeContext = createContext();
+
+    const ThemeProvider = ({ children }) => {
+      const [theme, setTheme] = useState("claro");
+
+      const toggleTheme = () => {
+        setTheme(prev => prev === "claro" ? "oscuro" : "claro");
+      };
+
+      return (
+        <ThemeContext.Provider value={{ theme, toggleTheme }}>
+          {children}
+        </ThemeContext.Provider>
+      );
+    };
+
+    const ThemeToggle = () => {
+      const { toggleTheme } = useContext(ThemeContext);
+      return (
+        <div className="toggle-box">
+          <button onClick={toggleTheme}>Cambiar Tema</button>
+        </div>
+      );
+    };
+
+    const ThemeDisplay = () => {
+      const { theme } = useContext(ThemeContext);
+
+      const estilos = {
+        backgroundColor: theme === "oscuro" ? "#0f172a" : "#ffffff",
+        color: theme === "oscuro" ? "#e2e8f0" : "#1a1a1a"
+      };
+
+      return (
+        <div className="card" style={estilos}>
+          <h2>Modo actual: {theme === "oscuro" ? "Oscuro" : "Claro"}</h2>
+        </div>
+      );
+    };
+
+    const App = () => {
+      const { theme } = useContext(ThemeContext);
+
+      const fondo = {
+        backgroundColor: theme === "oscuro" ? "#1e293b" : "#f0f0f0",
+        width: "100vw",
+        height: "100vh",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center"
+      };
+
+      return (
+        <div style={fondo}>
+          <div className="app-container">
+            <ThemeDisplay />
+            <ThemeToggle />
+          </div>
+        </div>
+      );
+    };
+
+    const Root = () => (
+      <ThemeProvider>
+        <App />
+      </ThemeProvider>
+    );
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<Root />);
+  </script>
+</body>
+</html>

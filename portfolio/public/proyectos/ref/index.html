@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cronometro useRef</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  <!-- Estilos internos -->
+  <style>
+    body {
+      background-color: #e3f2fd;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    h1 {
+      color: #1565c0;
+      margin-top: 30px;
+    }
+
+    h2 {
+      color: #0d47a1;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .controls button {
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: #1565c0;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .controls button:hover {
+      background-color: #0d47a1;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background-color: #bbdefb;
+      margin: 5px auto;
+      padding: 10px;
+      border-radius: 5px;
+      color: #0d47a1;
+      width: 60%;
+    }
+  </style>
+
+  <!-- React + Babel -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- Script JSX -->
+  <script type="text/babel">
+    const { useState, useEffect, useRef } = React;
+
+    function Stopwatch() {
+      const [time, setTime] = useState(0);
+      const [isRunning, setIsRunning] = useState(false);
+      const [sessions, setSessions] = useState([]);
+      const intervalRef = useRef(null);
+
+      useEffect(() => {
+        if (isRunning) {
+          intervalRef.current = setInterval(() => {
+            setTime((prev) => prev + 1);
+          }, 1000);
+        } else {
+          clearInterval(intervalRef.current);
+          intervalRef.current = null;
+        }
+
+        return () => clearInterval(intervalRef.current);
+      }, [isRunning]);
+
+      const toggle = () => setIsRunning(!isRunning);
+      const reset = () => {
+        setIsRunning(false);
+        setTime(0);
+        clearInterval(intervalRef.current);
+        intervalRef.current = null;
+      };
+      const save = () => {
+        if (time > 0) setSessions([...sessions, time]);
+      };
+
+      return (
+        <div className="container">
+          <h1>Cronometro</h1>
+          <h2>{time} segundos</h2>
+          <div className="controls">
+            <button onClick={toggle}>{isRunning ? "Pausar" : "Iniciar"}</button>
+            <button onClick={reset}>Reiniciar</button>
+            <button onClick={save}>Guardar</button>
+          </div>
+          <ul>
+            {sessions.map((s, i) => (
+              <li key={i}>Sesion {i + 1}: {s} segundos</li>
+            ))}
+          </ul>
+        </div>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<Stopwatch />);
+  </script>
+</body>
+</html>
