@@ -150,3 +150,66 @@ button:hover, .btn:hover {
   margin-top: 1rem;
   margin-bottom: 1.5rem;
 }
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.skill-card {
+  background: #1e1e1e;
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  text-align: center;
+  width: 260px;
+  transition: all 0.4s ease;
+  font-weight: bold;
+  box-shadow: 0 0 8px #000;
+}
+
+/* Animaciones únicas por habilidad */
+
+.html-card:hover {
+  transform: rotate(2deg);
+  background-color: #e44d26;
+  color: #fff;
+}
+
+.css-card:hover {
+  background: linear-gradient(135deg, #264de4, #2965f1);
+  color: white;
+}
+
+.js-card:hover {
+  transform: scale(1.1) translateY(-5px);
+  background-color: #f0db4f;
+  color: #000;
+}
+
+.react-card:hover {
+  box-shadow: 0 0 10px #00ffff, 0 0 30px #00ffff;
+  color: #00ffff;
+}
+
+.api-card:hover {
+  transform: perspective(500px) rotateY(8deg);
+  background-color: #1d3557;
+  color: #a8dadc;
+}
+
+.nginx-card:hover {
+  animation: shake 0.3s;
+  background-color: #2e8b57;
+  color: #fff;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-2px); }
+  100% { transform: translateX(0); }
+}

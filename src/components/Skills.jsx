@@ -10,15 +10,17 @@ function Skills() {
 
   return (
     <section id="habilidades">
-      <h2>Habilidades</h2>
+      <h2 className="tron-title">Habilidades</h2>
       <div className="skills-grid">
-        {habilidades.map((skill, index) => (
-          <div key={index} className="skill-card">
-            {skill}
-          </div>
-        ))}
+        <div className="skill-card html-card">HTML</div>
+        <div className="skill-card css-card">CSS</div>
+        <div className="skill-card js-card">JavaScript</div>
+        <div className="skill-card react-card">React (useMemo, useRef, useCallback, useContext)</div>
+        <div className="skill-card api-card">APIs (fetch)</div>
+        <div className="skill-card nginx-card">Nginx / administración de servidores</div>
       </div>
     </section>
+
   );
 }
 
