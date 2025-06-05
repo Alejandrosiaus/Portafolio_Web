@@ -7,7 +7,15 @@ function Projects() {
         <img src="/assets/mapache1.png" alt="Mapache" className="section-icon" />
         <div className="section-textos">
           <h2 className="outline-title">Proyectos</h2>
-          <p>Estos son los algunos de los proyectos realizados durante el curso</p>
+          <a
+            href="https://github.com/Alejandrosiaus"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="github-btn"
+          >
+            Mi Perfil de GitHub
+          </a>
+          <p>Estos son los algunos de los proyectos realizados durante el curso, el resto los encontraras en mi perfil de Github</p>
         </div>
       </div>
 

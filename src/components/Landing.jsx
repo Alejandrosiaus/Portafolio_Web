@@ -40,10 +40,10 @@ const Landing = () => {
             onMouseLeave={handleMouseLeave}
           />
           <div className="textos">
-            <p>Soy un estudiante del curso de programación web</p>
+            <p>Soy un estudiante del curso de programación</p>
             <p>
-              Este es mi portafolio: una colección de mis habilidades aprendidas en el curso.
-              Junto con mi currículum y trabajos elaborados durante el curso.
+              Este es mi portafolio: una colección de mis habilidades aprendidas durante mi carrera.
+              Junto con mi currículum y trabajos elaborados durante el curso de programacion web.
             </p>
           </div>
         </div>

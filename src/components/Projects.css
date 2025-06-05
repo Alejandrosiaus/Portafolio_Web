@@ -24,3 +24,25 @@
 .project-card p {
   margin-bottom: 0.5rem;
 }
+.projects-section .section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.projects-section .github-btn {
+  background-color: #24292e;
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.projects-section .github-btn:hover {
+  background-color: #444d56;
+}

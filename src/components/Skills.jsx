@@ -87,7 +87,7 @@ function Skills() {
         />
         <div className="section-textos">
           <h2 className="outline-title">Habilidades</h2>
-          <p>Las siguientes son las habilidades aprendidas en el curso:</p>
+          <p>Este es un listado de las habilidades que he aprendido a lo largo de mi carrera</p>
         </div>
       </div>
 
