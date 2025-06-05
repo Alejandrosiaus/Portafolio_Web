@@ -10,7 +10,6 @@
   height: auto;
 }
 
-/* SOLO en pantallas pequeñas: imagen arriba del título */
 @media (max-width: 768px) {
   .section-header {
     flex-direction: column;

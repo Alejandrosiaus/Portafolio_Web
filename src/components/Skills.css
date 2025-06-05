@@ -1,8 +1,4 @@
-/* =========================================
-   Skills.css
-   ========================================= */
 
-/* ===== Grid general de tarjetas ===== */
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
@@ -11,7 +7,6 @@
   padding: 2rem 1rem;
 }
 
-/* ===== Tarjeta base ===== */
 .skill-card {
   background: #1e1e1e;
   padding: 1.5rem 2rem;
@@ -19,15 +14,12 @@
   font-size: 1rem;
   text-align: center;
   width: 260px;
-  transition: all 0.4s ease; /* transición suave para color, transform, etc */
+  transition: all 0.4s ease; 
   font-weight: bold;
   box-shadow: 0 0 8px #000;
   color: #fff;
-  /* IMPORTANTE: dejamos “transform” en su estado por defecto (rotación 0, escala 1), 
-     pero Anime.js inyectará un “style” al hacer scroll. */
 }
 
-/* ===== Hover animaciones originales (usando !important) ===== */
 .html-card:hover {
   transform: rotate(2deg) !important;
   background-color: #e44d26;
@@ -47,13 +39,11 @@
 }
 
 .react-card:hover {
-  /* Agrego un glow “turquesa” manteniendo el color original */
   box-shadow: 
     0 0 10px #00ffff,
     0 0 30px #00ffff,
     0 0 60px #00ffff50;
   color: #00ffff;
-  /* Aseguramos que cualquier 'transform' previo quede anulado (no rota ni mueve) */
   transform: none !important;
 }
 
@@ -67,10 +57,8 @@
   animation: shake 0.3s;
   background-color: #2e8b57;
   color: #fff;
-  /* Aseguramos que las animaciones de transform en línea de Anime.js no interferirán */
 }
 
-/* ===== Keyframes “shake” para nginx-card ===== */
 @keyframes shake {
   0%   { transform: translateX(0); }
   25%  { transform: translateX(-4px); }
@@ -79,7 +67,6 @@
   100% { transform: translateX(0); }
 }
 
-/* ===== Estilos opcionales de lista (si usas <ul> dentro de #habilidades) ===== */
 #habilidades ul {
   list-style-type: disc;
   padding-left: 1.5rem;

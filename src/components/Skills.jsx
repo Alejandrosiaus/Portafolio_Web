@@ -3,7 +3,6 @@ import { useEffect } from "react";
 
 function Skills() {
   useEffect(() => {
-    // Primero, comprobamos que anime esté en window
     if (!window.anime) {
       console.warn("animejs no está cargado. Revisa index.html");
       return;
