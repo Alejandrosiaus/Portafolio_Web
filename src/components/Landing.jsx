@@ -30,7 +30,7 @@ const Landing = () => {
   return (
     <div className="hero-section">
       <div className="overlay">
-        <h1>ALEJANDRO RIVERA</h1>
+        <h1 className="name">ALEJANDRO<br />RIVERA</h1>
         <div className="contenido-animado">
           <img
             src="/assets/mapache.gif"

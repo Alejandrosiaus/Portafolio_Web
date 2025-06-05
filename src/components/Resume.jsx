@@ -1,3 +1,4 @@
+import "./Resume.css";
 function Resume() {
   return (
     <section id="curriculum" className="section-container">

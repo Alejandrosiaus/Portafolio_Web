@@ -1,4 +1,5 @@
 import "./mapaches.css"; 
+import "./Projects.css";
 function Projects() {
   return (
     <section id="proyectos" className="section-container">

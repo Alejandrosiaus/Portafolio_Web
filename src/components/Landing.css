@@ -8,8 +8,17 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-top: 60px; /* ← deja espacio para la navbar */
 }
+
+.name {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 4rem;
+  color: #f5f7f7;
+  letter-spacing: 2px;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.6);
@@ -61,6 +70,11 @@
   .animated-img {
     margin-right: 0;
     margin-bottom: 1rem;
+  }
+  .name {
+    font-size: 1rem; /* Antes era 4rem */
+    text-align: center;
+    line-height: 1.2;
   }
   
 }

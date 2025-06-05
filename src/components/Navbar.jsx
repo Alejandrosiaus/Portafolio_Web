@@ -1,12 +1,13 @@
-import "./Navbar.css"; // Asegúrate de tener los estilos
+import "./Navbar.css";
 
 function Navbar() {
   return (
-    <nav className="nav-grid">
-      <a href="#curriculum">Curriculum</a>
+    <nav className="navbar">
+      <a href="#curriculum">Currículum</a>
       <a href="#habilidades">Habilidades</a>
       <a href="#proyectos">Proyectos</a>
     </nav>
+
   );
 }
 

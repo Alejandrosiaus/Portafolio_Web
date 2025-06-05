@@ -1,0 +1,24 @@
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+.section-icon {
+  width: 80px;
+  height: auto;
+}
+
+/* SOLO en pantallas pequeñas: imagen arriba del título */
+@media (max-width: 768px) {
+  .section-header {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .section-icon {
+    margin-bottom: 0.5rem;
+  }
+}

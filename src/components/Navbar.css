@@ -1,44 +1,42 @@
-.nav-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
-  text-align: center;
-  background-color: rgba(28, 20, 54, 0.784);
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(28, 20, 54, 0.9);
   color: white;
   font-weight: bold;
-  margin: 0;
   height: 60px;
-  position: sticky; /* ← fijo en la parte superior */
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 9999;
 }
 
-.nav-grid a {
-  display: block;
+.navbar a {
+  flex: 1;
+  text-align: center;
   padding: 1rem;
   transition: background 0.3s ease;
-  text-align: center;
+  color: #61dafb;
+  white-space: nowrap;
 }
 
-.nav-grid a:hover {
+.navbar a:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-
-@media (max-width: 100px) {
-  .nav-grid {
-    grid-template-columns: 1fr;
-    height: auto; /* ← ya no fija, se adapta */
+/* Ajustes en móvil */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    height: auto;
     padding: 0.5rem 0;
-    text-align: center;
-    gap: 0;
   }
 
-  .nav-grid a {
+  .navbar a {
+    width: 100%;
     padding: 0.75rem;
     font-size: 1rem;
   }
- 
 }
