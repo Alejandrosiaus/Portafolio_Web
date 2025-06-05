@@ -1,6 +1,6 @@
 .hero-section {
-  height: 100vh;
-  background-image: url("/assets/fondo-animado.gif"); 
+  height: 80vh;
+  background-image: url("/assets/fondo-animado.gif");
   background-size: cover;
   background-position: center;
   position: relative;
@@ -8,10 +8,11 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding-top: 60px; /* ← deja espacio para la navbar */
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.6); 
+  background-color: rgba(0, 0, 0, 0.6);
   padding: 2rem;
   border-radius: 12px;
   color: white;
@@ -26,12 +27,29 @@
 .overlay p {
   font-size: 1.2rem;
 }
+
 .contenido-animado {
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
+}
+
+
+.animated-img {
+  width: 150px;
+  height: auto;
+}
+
+.outline-title {
+  font-size: 3rem;
+  color: transparent;
+  -webkit-text-stroke: 1px #ffffff;
+  text-stroke: 1px #fff;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -44,21 +62,5 @@
     margin-right: 0;
     margin-bottom: 1rem;
   }
-}
-
-
-.animated-img {
-  width: 150px;
-  height: auto;
-}
-
-
-.outline-title {
-  font-size: 3rem; 
-  color: transparent;
-  -webkit-text-stroke: 1px #ffffff; 
-  text-stroke: 1px #fff; 
-  font-weight: bold;
-  text-align: left;
-  margin-bottom: 1rem;
+  
 }

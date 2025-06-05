@@ -1,11 +1,16 @@
+import "./mapaches.css"; 
 function Projects() {
   return (
-    <section id="proyectos">
-      <h2 className="outline-title">Proyectos</h2>
-      <p>Estos son los algunos de los proyectos realizados durante el curso</p>
+    <section id="proyectos" className="section-container">
+      <div className="section-header">
+        <img src="/assets/mapache1.png" alt="Mapache" className="section-icon" />
+        <div className="section-textos">
+          <h2 className="outline-title">Proyectos</h2>
+          <p>Estos son los algunos de los proyectos realizados durante el curso</p>
+        </div>
+      </div>
+
       <div className="project-grid">
-
-
         <div className="project-card">
           <h3>GameBlades - Ecommerce</h3>
           <p>Tienda ficticia de espadas legendarias, con carrito, favoritos y sistema de rutas.</p>
@@ -26,21 +31,13 @@ function Projects() {
           <p><strong>Tecnologías:</strong> React (CDN), useCallback</p>
           <a href="/proyectos/callback/index.html" className="btn" target="_blank">Ver demo</a>
         </div>
-        {/*
-        <div className="project-card">
-          <h3>Buscador con useMemo</h3>
-          <p>Filtra usuarios de Breaking Bad de forma eficiente.</p>
-          <p><strong>Tecnologías:</strong> React (CDN), useMemo</p>
-          <a href="/proyectos/memo/index.html" className="btn" target="_blank">Ver demo</a>
-        </div>
-        */}
+
         <div className="project-card">
           <h3>Cronómetro con useRef</h3>
           <p>Cronómetro funcional con historial de sesiones guardadas.</p>
           <p><strong>Tecnologías:</strong> React (CDN), useRef</p>
           <a href="/proyectos/ref/index.html" className="btn" target="_blank">Ver demo</a>
         </div>
-
       </div>
     </section>
   );

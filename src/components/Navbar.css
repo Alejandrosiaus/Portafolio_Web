@@ -3,27 +3,42 @@
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(28, 20, 54, 0.784);
   color: white;
   font-weight: bold;
   margin: 0;
-  position: fixed;
+  height: 60px;
+  position: sticky; /* ← fijo en la parte superior */
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 9999; /* alto para asegurar que esté por encima de todo */
+  z-index: 9999;
 }
 
-
+.nav-grid a {
+  display: block;
+  padding: 1rem;
+  transition: background 0.3s ease;
+  text-align: center;
+}
 
 .nav-grid a:hover {
   background-color: rgba(255, 255, 255, 0.1);
-  transform: scale(1.05);
 }
 
-/* Móvil: apilar botones */
-@media (max-width: 600px) {
+
+@media (max-width: 100px) {
   .nav-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    height: auto; /* ← ya no fija, se adapta */
+    padding: 0.5rem 0;
+    text-align: center;
+    gap: 0;
   }
+
+  .nav-grid a {
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+ 
 }

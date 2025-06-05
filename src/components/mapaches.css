@@ -1,0 +1,22 @@
+.section-container {
+  padding: 4rem 2rem;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.section-icon {
+  width: 100px;
+  height: auto;
+}
+
+.section-textos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+

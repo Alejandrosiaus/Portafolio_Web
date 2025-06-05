@@ -16,6 +16,7 @@ body {
   background-size: auto;
   background-position: center;
   background-attachment: fixed;
+
   backdrop-filter: brightness(0.9);
 }
 
@@ -32,7 +33,7 @@ a:hover {
 /* ===== Secciones ===== */
 section {
   padding: 3rem 1.5rem;
-  max-width: 900px;
+  max-width: 80%;
   margin: auto;
 }
 
@@ -42,17 +43,7 @@ h1, h2, h3 {
 }
 
 /* ===== Navbar Sticky ===== */
-nav {
-  position: sticky;
-  top: 0;
-  background-color: #222;
-  z-index: 999;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
+
 
 nav ul {
   list-style: none;
