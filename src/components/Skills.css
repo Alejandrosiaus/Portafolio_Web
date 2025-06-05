@@ -68,7 +68,6 @@
   background-color: #2e8b57;
   color: #fff;
   /* Aseguramos que las animaciones de transform en línea de Anime.js no interferirán */
-  transform: none !important;
 }
 
 /* ===== Keyframes “shake” para nginx-card ===== */
