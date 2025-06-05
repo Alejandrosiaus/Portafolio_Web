@@ -1,0 +1,54 @@
+.hero-section {
+  height: 100vh;
+  background-image: url("/assets/fondo-animado.gif"); 
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6); 
+  padding: 2rem;
+  border-radius: 12px;
+  color: white;
+  max-width: 800px;
+}
+
+.overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.overlay p {
+  font-size: 1.2rem;
+}
+.contenido-animado {
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .contenido-animado {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .animated-img {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+
+.animated-img {
+  width: 150px;
+  height: auto;
+}
+
