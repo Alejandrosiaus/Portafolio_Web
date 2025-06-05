@@ -1,6 +1,82 @@
 import "./Skills.css";
+import { useEffect } from "react";
 
 function Skills() {
+  useEffect(() => {
+    // Primero, comprobamos que anime esté en window
+    if (!window.anime) {
+      console.warn("animejs no está cargado. Revisa index.html");
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const className = el.classList[1];
+
+            const animations = {
+              "html-card": {
+                targets: el,
+                translateY: [-100, 0],
+                opacity: [0, 1],
+                duration: 2000,
+                easing: "easeOutBounce",
+              },
+              "css-card": {
+                targets: el,
+                scale: [0.5, 1],
+                opacity: [0, 1],
+                duration: 2000,
+                easing: "easeOutElastic(1, .8)",
+              },
+              "js-card": {
+                targets: el,
+                rotate: [0, 360],
+                opacity: [0, 1],
+                duration: 2000,
+                easing: "easeInOutSine",
+              },
+              "react-card": {
+                targets: el,
+                translateX: [-150, 0],
+                opacity: [0, 1],
+                duration: 2000,
+                easing: "easeOutExpo",
+              },
+              "api-card": {
+                targets: el,
+                scale: [1.5, 1],
+                opacity: [0, 1],
+                duration: 2000,
+                easing: "easeOutBack",
+              },
+              "nginx-card": {
+                targets: el,
+                translateY: [-50, 0],
+                scale: [0.8, 1],
+                opacity: [0, 1],
+                duration: 2000,
+                easing: "easeOutCirc",
+              },
+            };
+
+            const animation = animations[className];
+            if (animation) {
+              window.anime(animation);
+              observer.unobserve(el);
+            }
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    const elements = document.querySelectorAll(".skill-card");
+    elements.forEach((el) => observer.observe(el));
+  }, []);
+
   return (
     <section id="habilidades" className="skills-section section-container">
       <div className="section-header">
