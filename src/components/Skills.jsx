@@ -10,7 +10,8 @@ function Skills() {
 
   return (
     <section id="habilidades">
-      <h2 className="tron-title">Habilidades</h2>
+      <h2 className="outline-title">Habilidades</h2>
+      <p>Las siguientes son las habilidades aprendicas en el curso</p>
       <div className="skills-grid">
         <div className="skill-card html-card">HTML</div>
         <div className="skill-card css-card">CSS</div>

@@ -1,8 +1,8 @@
 function Projects() {
   return (
     <section id="proyectos">
-      <h2>Proyectos</h2>
-
+      <h2 className="outline-title">Proyectos</h2>
+      <p>Estos son los algunos de los proyectos realizados durante el curso</p>
       <div className="project-grid">
 
 

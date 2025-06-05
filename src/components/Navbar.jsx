@@ -1,19 +1,13 @@
+import "./Navbar.css"; // Asegúrate de tener los estilos
+
 function Navbar() {
   return (
-    <nav>
-      <h1>Mi Portafolio</h1>
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#curriculum">Curriculum</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-      </ul>
+    <nav className="nav-grid">
+      <a href="#curriculum">Curriculum</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#proyectos">Proyectos</a>
     </nav>
   );
 }
 
 export default Navbar;
-
-
-
-

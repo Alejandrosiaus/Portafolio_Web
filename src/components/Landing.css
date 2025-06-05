@@ -52,3 +52,13 @@
   height: auto;
 }
 
+
+.outline-title {
+  font-size: 3rem; 
+  color: transparent;
+  -webkit-text-stroke: 1px #ffffff; 
+  text-stroke: 1px #fff; 
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,29 @@
+.nav-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-weight: bold;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999; /* alto para asegurar que esté por encima de todo */
+}
+
+
+
+.nav-grid a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+}
+
+/* Móvil: apilar botones */
+@media (max-width: 600px) {
+  .nav-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

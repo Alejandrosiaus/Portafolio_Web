@@ -1,7 +1,7 @@
 function Resume() {
   return (
     <section id="curriculum">
-      <h2>Curriculum</h2>
+      <h2 className="outline-title">Curriculum</h2>
       <p>Puedes ver o descargar mi curriculum aca:</p>
 
       <div className="pdf-container">
