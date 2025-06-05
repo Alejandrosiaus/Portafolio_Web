@@ -1,18 +1,8 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import "./Landing.css";
 
 const Landing = () => {
-  const [currentImage, setCurrentImage] = useState("animacion1.png");
   const audioRef = useRef(null);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImage((prev) =>
-        prev === "animacion1.png" ? "animacion2.png" : "animacion1.png"
-      );
-    }, 130);
-    return () => clearInterval(interval);
-  }, []);
 
   const handleMouseEnter = () => {
     const audio = audioRef.current;
@@ -43,7 +33,7 @@ const Landing = () => {
         <h1>ALEJANDRO RIVERA</h1>
         <div className="contenido-animado">
           <img
-            src={`/assets/${currentImage}`}
+            src="/assets/mapache.gif"
             alt="Animación"
             className="animated-img"
             onMouseEnter={handleMouseEnter}
